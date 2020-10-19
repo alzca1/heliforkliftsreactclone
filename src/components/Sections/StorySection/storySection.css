@@ -1,0 +1,50 @@
+#storySection .storySection {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1200px;
+  height: auto;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#storySection .section-title::after {
+  content: "";
+  border: 1px solid #e30b20;
+  width: 130px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+#storySection .storyText {
+  font-family: "Open Sans";
+  width: 85%;
+  font-size: 1.1rem;
+  color: #787878;
+}
+
+#storySection .storySection h3 {
+  margin-top: 60px;
+}
+
+#storySection .storyText h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+#storySection .storyText p {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+#storySection .storyButtons {
+  margin-top: 30px;
+}
+
+#storySection .storyText img {
+  width: 100%;
+}
+/*# sourceMappingURL=storySection.css.map */

@@ -1,0 +1,46 @@
+#storySection .storySection {
+  flex-direction: column;
+  max-width: 1200px;
+  height: auto;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#storySection .section-title::after {
+  content: "";
+  border: 1px solid rgba(227, 11, 32, 1);
+  width: 130px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+#storySection .storyText {
+  font-family: "Open Sans";
+  width: 85%;
+  font-size: 1.1rem;
+  color: rgba(120, 120, 120, 1);
+}
+
+#storySection .storySection h3 {
+  margin-top: 60px;
+}
+
+#storySection .storyText h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: rgba(44, 44, 44, 1);
+  margin-bottom: 8px;
+}
+
+#storySection .storyText p {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+#storySection .storyButtons {
+    margin-top: 30px; 
+}
+
+#storySection .storyText img{
+  width: 100%; 
+}

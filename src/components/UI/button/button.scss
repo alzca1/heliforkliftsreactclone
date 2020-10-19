@@ -1,0 +1,68 @@
+.default-button{
+    display: inline-block;
+    padding: 5px 18px 11px 18px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    transition: ease 0.3s;
+    border-radius: 3px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    cursor: pointer; 
+}
+
+
+.red-button {
+    background-color:rgba(230, 0, 18, 1.00);
+    color: white;
+}
+
+.red-button:hover{
+    background-color: white; 
+    color: rgba(230, 0, 18, 1.00);
+}
+
+
+.white-button{
+background-color: white; 
+color: rgba(230, 0, 18, 1.00);
+}
+
+.white-button:hover{
+    background-color: rgba(230, 0, 18, 1.00);
+    color: white;
+}
+
+
+.medium-red-button{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgba(230, 1, 19, 1.00);
+    padding: 15px 74px;
+    margin: 0 5px 12px 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 2px solid rgba(230,1,19,1)
+  }
+
+  .medium-white-button{
+    display: inline-block;
+    color: rgba(230, 1, 19, 1.00);
+    text-transform: uppercase;
+    background-color: white; 
+    padding: 14px 70px;
+    margin: 0 5px 10px 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 3px solid rgba(230,1,19,1)
+  }
+
+  .medium-red-button:hover{
+      background-color: rgba(177, 7, 21, 1.00);
+      border: 2px solid rgba(177, 7, 21, 1.00);
+  }
+
+  .medium-white-button:hover{
+      color: rgba(177, 7, 21, 1.00); 
+      border: 3px solid rgba(177, 7, 21, 1.00);
+  }
