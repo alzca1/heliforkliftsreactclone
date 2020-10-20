@@ -1,7 +1,7 @@
 import React from "react";
 import "./button.css";
 export default function button(props) {
-  const STYLES = ["red-button", "white-button", "medium-red-button", "medium-white-button"];
+  const STYLES = ["red-button", "white-button", "medium-red-button", "medium-white-button", "large-button"];
  
 
   const checkStyle = STYLES.includes(props.buttonStyle)

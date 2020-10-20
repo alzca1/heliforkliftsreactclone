@@ -8,7 +8,7 @@ export default function storySection() {
   return (
     <section id="storySection">
       <div className="storySection container">
-        <h3 className="section-title">Lifting the future</h3>
+        <h2 className="section-title">Lifting the future</h2>
         <div className="storyText">
           <h2>Our Story</h2>
           <p>

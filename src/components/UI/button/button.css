@@ -1,13 +1,13 @@
 .default-button {
   display: inline-block;
-  padding: 5px 18px 11px 18px;
+  padding: 5px 23px 6px 23px;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
   border-radius: 3px;
   font-family: "Open Sans";
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -63,5 +63,23 @@
 .medium-white-button:hover {
   color: #b10715;
   border: 3px solid #b10715;
+}
+
+.large-button {
+  width: 100%;
+  padding: 18px 0;
+  margin: .5px 0;
+  text-align: center;
+  background-color: #a1a1a1;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  -webkit-transition: 0.3s ease background-color;
+  transition: 0.3s ease background-color;
+}
+
+.large-button:hover {
+  background-color: #e60012;
 }
 /*# sourceMappingURL=button.css.map */
