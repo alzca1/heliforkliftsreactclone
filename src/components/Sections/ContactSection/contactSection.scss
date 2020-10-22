@@ -1,0 +1,52 @@
+#contactSection .contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: auto; 
+}
+
+#contactSection .contactSection .cardGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactSection .cardGroup .sectionCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  width: 100%;
+}
+
+#contactSection .cardGroup .sectionCard h5 {
+  color: rgba(228, 11, 32, 1);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: rgba(44, 44, 44, 1);
+  font-weight: 400;
+  margin-bottom: 10px; 
+}
+
+#contactSection .cardGroup .sectionCard .card-info {
+  color: rgba(120, 120, 120, 1);
+  font-size: 0.9rem;
+  font-family: "Open Sans";
+}
+#contactSection .cardGroup .sectionCard .fas, .far {
+  color: rgba(228, 11, 32, 1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+#contactSection .cardGroup .sectionCard  a {
+ text-decoration: none;
+ font-size: 0.9rem; 
+ color: rgba(228, 11, 32, 1.00);
+ font-family: "Open Sans";
+ font-weight: 700;  
+  }

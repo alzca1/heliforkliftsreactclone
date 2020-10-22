@@ -15,7 +15,7 @@ export default function equipmentSection() {
   ];
 
   const buttons = buttonsText.map((element) => {
-    return <Button label={element} buttonStyle="large-button" />;
+    return <Button key={element} label={element} buttonStyle="large-button" />;
   });
 
   return (

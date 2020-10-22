@@ -1,0 +1,111 @@
+.map {
+  width: 100%;
+  max-height: 400px;
+  position: relative;
+}
+
+.directionsPopOver{
+    position: absolute; 
+    top: 60px; 
+    left: 170px;
+    z-index: 200;
+    width: 150px; 
+    background-color:white; 
+    padding: 10px 15px 10px 10px;
+    box-shadow: 1px 1px 5px grey;
+}
+
+
+.directionsPopOver .popOverContent{
+    font-size: 0.6rem;
+    color: rgba(120, 120, 120, 1.00);
+    text-align: left;
+    width: 100%;
+}
+
+
+
+.infoWindow {
+  position: absolute;
+  top: 1 rem;
+  left: 1 rem;
+  z-index: 100;
+  background-color: white;
+  margin: 10px;
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.09);
+  display: flex;
+}
+
+.infoWindow h5 {
+  margin-bottom: 3px;
+}
+
+.infoWindow span,
+a {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.infoWindow span {
+  color: rgba(91, 91, 91, 1);
+}
+
+
+
+.infoWindow .infoAddress a {
+  text-decoration: none;
+  color: rgba(97, 157, 229, 1);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.infoWindow .infoAddress a:hover {
+    text-decoration: underline;
+  }
+  
+
+.infoWindow .infoDirections {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5px 12px 30px;
+  cursor: pointer;
+}
+
+.infoWindow .infoDirections .fas {
+  font-size: 1.3rem;
+  color: rgba(97, 157, 229, 1);
+  transition: 0.2s ease color;
+  display: block;
+  text-align: center;
+}
+
+.infoWindow .infoDirections a {
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.infoWindow .infoDirections a span{
+    color: rgba(63, 134, 220, 1);
+    margin-top: 4px; 
+}
+
+.infoWindow a:hover span{
+text-decoration: underline;
+font-weight: 400;
+color: rgba(63, 134, 220, 1);
+}
+
+.infoWindow .infoDirections a:hover .fas {
+    color: rgba(63, 134, 220, 1);
+    text-decoration: none; 
+}
+
+.markerInfoWindow{
+    padding: 13px; 
+}

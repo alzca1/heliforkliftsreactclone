@@ -5,6 +5,7 @@ import StorySection from '../Sections/StorySection/storySection'
 import WhySection  from '../Sections/WhySection/whySection'
 import CatalogueSection from '../Sections/CatalogueSection/catalogueSection'
 import QuestionSection from '../Sections/QuestionSection/questionSection'
+import ContactSection from '../Sections/ContactSection/contactSection'
 function home() {
     return (
         <div>
@@ -14,6 +15,7 @@ function home() {
             <WhySection />
             <CatalogueSection />
            <QuestionSection />
+            <ContactSection />
         </div>
     )
 }

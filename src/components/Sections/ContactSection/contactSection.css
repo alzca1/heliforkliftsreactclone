@@ -1,0 +1,81 @@
+#contactSection .contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  height: auto;
+}
+
+#contactSection .contactSection .cardGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contactSection .cardGroup .sectionCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 150px;
+  width: 100%;
+}
+
+#contactSection .cardGroup .sectionCard h5 {
+  color: #e40b20;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #2c2c2c;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#contactSection .cardGroup .sectionCard .card-info {
+  color: #787878;
+  font-size: 0.9rem;
+  font-family: "Open Sans";
+}
+
+#contactSection .cardGroup .sectionCard .fas, .far {
+  color: #e40b20;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+#contactSection .cardGroup .sectionCard a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #e40b20;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+/*# sourceMappingURL=contactSection.css.map */
