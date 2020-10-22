@@ -9,10 +9,10 @@ export class MapContainer extends Component {
     activeMarker: {},
     selectedPlace: {},
     directionsPopOver: false,
+    
   };
 
   onMarkerClick = (props, marker, event) => {
-    console.log(props, marker, event);
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -37,8 +37,14 @@ export class MapContainer extends Component {
       : this.setState({ directionsPopOver: false });
   };
 
+  mapWasClicked = () => {
+    console.log("clicked")
+  }
+
   render() {
     let popOver = null;
+    const viewMapURL =  "https://www.google.com/maps?ll=-38.010837,145.210236&z=14&t=m&hl=en&gl=AU&mapclient=embed&q=25+Zilla+Ct+Dandenong+South+VIC+3175";
+    const infoDirectionsURL = "https://www.google.com/maps?ll=-38.010837,145.210236&z=14&t=m&hl=en&gl=AU&mapclient=embed&daddr=25+Zilla+Ct+Dandenong+South+VIC+3175@-38.010837,145.210236"
     if (this.state.directionsPopOver) {
       popOver = (
         <div className="popOverWrapper">
@@ -59,7 +65,7 @@ export class MapContainer extends Component {
             <span>25 Zilla CT, Dandenong South VIC</span>
             <span>3175</span>
             <a
-              href="https://www.google.com/maps?ll=-38.010837,145.210236&z=14&t=m&hl=en&gl=AU&mapclient=embed&q=25+Zilla+Ct+Dandenong+South+VIC+3175"
+              href={viewMapURL}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -68,7 +74,7 @@ export class MapContainer extends Component {
           </div>
           <div className="infoDirections">
             <a
-              href="https://www.google.com/maps?ll=-38.010837,145.210236&z=14&t=m&hl=en&gl=AU&mapclient=embed&daddr=25+Zilla+Ct+Dandenong+South+VIC+3175@-38.010837,145.210236"
+              href={infoDirectionsURL}
               rel="noopener noreferrer"
               target="_blank"
               onMouseEnter={this.toggleDirectionsPopOver}
@@ -89,6 +95,7 @@ export class MapContainer extends Component {
           }}
           disableDefaultUI={true}
           zoomControl={true}
+          onClick={this.mapWasClicked}
         >
           <Marker
             onMouseover={this.onMarkerClick}
