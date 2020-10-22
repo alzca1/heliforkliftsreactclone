@@ -30,17 +30,23 @@ export class MapContainer extends Component {
   };
 
   toggleDirectionsPopOver = () => {
-    const {directionsPopOver} = this.state; 
+    const { directionsPopOver } = this.state;
 
-    !directionsPopOver? this.setState({directionsPopOver: true}) : this.setState({directionsPopOver: false})
+    !directionsPopOver
+      ? this.setState({ directionsPopOver: true })
+      : this.setState({ directionsPopOver: false });
   };
 
   render() {
     let popOver = null;
     if (this.state.directionsPopOver) {
       popOver = (
-        <div className="directionsPopOver">
-          <div className="popOverContent">Get directions to this location on Google Maps</div>
+        <div className="popOverWrapper">
+          <div className="directionsPopOver">
+            <div className="popOverContent">
+              Get directions to this location on Google Maps
+            </div>
+          </div>
         </div>
       );
     }

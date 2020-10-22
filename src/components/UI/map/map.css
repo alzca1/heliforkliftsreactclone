@@ -4,9 +4,24 @@
   position: relative;
 }
 
+.popOverWrapper {
+  position: relative;
+}
+
+.directionsPopOver::before {
+  position: absolute;
+  z-index: 199;
+  content: "";
+  right: calc(70% - 10px);
+  top: -8px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 8px solid #DCDCDC;
+}
+
 .directionsPopOver {
   position: absolute;
-  top: 60px;
+  top: 55px;
   left: 170px;
   z-index: 200;
   width: 150px;
