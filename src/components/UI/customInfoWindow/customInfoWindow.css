@@ -14,6 +14,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .infoWindow .infoDirections .fas {
@@ -56,10 +62,6 @@ a {
   margin-top: 10px;
 }
 
-.infoWindow .infoAddress a:hover {
-  text-decoration: underline;
-}
-
 .infoWindow .infoDirections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,14 +80,31 @@ a {
   cursor: pointer;
 }
 
-.infoWindow a:hover span {
+.infoWindow .infoDirections:hover span {
   text-decoration: underline;
-  font-weight: 400;
+}
+
+.infoWindow .infoDirections:hover i {
+  text-decoration: none !important;
   color: #3f86dc;
 }
 
-.infoWindow .infoDirections a:hover .fas {
-  color: #3f86dc;
+.infoWindow .infoAddress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.largerMapContainer {
+  width: 90px;
+}
+
+.largerMapContainer a {
   text-decoration: none;
+  color: #3f86dc;
+}
+
+.largerMapContainer a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=customInfoWindow.css.map */

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import { googleKey } from "./apiKey";
-import CustomInfoWindow from '../customInfoWindow/customInfoWindow'
+import CustomInfoWindow from "../customInfoWindow/customInfoWindow";
 import "./map.css";
 
 export class MapContainer extends Component {
@@ -10,6 +10,7 @@ export class MapContainer extends Component {
     activeMarker: {},
     selectedPlace: {},
     directionsPopOver: false,
+    mapWasClicked: false,
   };
 
   onMarkerClick = (props, marker, event) => {
@@ -37,35 +38,17 @@ export class MapContainer extends Component {
       : this.setState({ directionsPopOver: false });
   };
 
-  mapWasClicked = () => {
-    console.log("clicked");
+  setMapWasClicked = () => {
+    this.setState({ mapWasClicked: true });
   };
 
   render() {
-    // const reducedPopOver = (
-    //   <div className="reducedInfoWindow">
-    //     <a href={viewMapURL} rel="noopener noreferrer" target="_blank">
-    //       View Larger Map
-    //     </a>
-    //   </div>
-    // );
-
-    // let popOver = null;
-
-    // if (this.state.directionsPopOver) {
-    //   popOver = (
-    //     <div className="popOverWrapper">
-    //       <div className="directionsPopOver">
-    //         <div className="popOverContent">
-    //           Get directions to this location on Google Maps
-    //         </div>
-    //       </div>
-    //     </div>
-    //   );
-    // }
     return (
       <div>
-        <CustomInfoWindow toggleDirectionsPopOver={this.onToggleDirectionsPopOver} />
+        <CustomInfoWindow
+          toggleDirectionsPopOver={this.onToggleDirectionsPopOver}
+          mapClicked={this.state.mapWasClicked}
+        />
         <Map
           google={this.props.google}
           zoom={14}
@@ -76,7 +59,7 @@ export class MapContainer extends Component {
           }}
           disableDefaultUI={true}
           zoomControl={true}
-          onClick={this.mapWasClicked}
+          onClick={this.setMapWasClicked}
         >
           <Marker
             onMouseover={this.onMarkerClick}
