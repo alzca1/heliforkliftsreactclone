@@ -1,0 +1,65 @@
+#enquirySection {
+  background-image: url("../../../img/footer-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+  border: 1px solid blue;
+}
+
+#enquirySection::after{
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1; 
+    }
+    
+
+#enquirySection .enquirySection {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+#enquirySection .enquirySection .enquiryForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#enquirySection h3 {
+  font-size: 2.3rem;
+}
+
+#enquirySection h3::after {
+  content: "";
+  border: 1px solid rgba(227, 11, 32, 1);
+  width: 220px;
+  display: block;
+  margin: 30px auto 0 auto;
+}
+
+#enquirySection .enquirySection .form{
+    margin: 0 auto;
+    width: 85%;  
+}
+#enquirySection .enquirySection .form input, textarea{
+    font-family: "Open Sans";
+    font-size: 1rem !important; 
+}
+
+#enquirySection .enquirySection .form a{
+    font-size: 1.4rem;
+   padding: 10px 30px; 
+    margin-top: 10px;  
+}

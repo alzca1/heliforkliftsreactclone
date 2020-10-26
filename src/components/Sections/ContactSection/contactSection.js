@@ -6,7 +6,7 @@ export default function contactSection() {
   return (
     <section id="contactSection">
       <div className="contactSection container">
-        <h3 className="section-subtitle">contact us</h3>
+        <h3 className="section-subtitle red">contact us</h3>
         <div className="cardGroup">
           <div className="sectionCard">
             <i className="fas fa-map-marker-alt"></i>
@@ -33,7 +33,7 @@ export default function contactSection() {
           </div>
         </div>
       </div>
-      <Map />
+      {/* <Map /> */}
     </section>
   );
 }

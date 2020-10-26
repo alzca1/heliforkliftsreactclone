@@ -63,10 +63,10 @@
 
 #questionSection .questionSection .questionText h3::after {
   content: "";
-  border: 0.8px solid #e30b20;
-  width: 100px;
+  border: 1px solid #e30b20;
+  width: 180px;
   display: block;
-  margin: 20px auto 0 auto;
+  margin: 30px auto 0 auto;
 }
 
 #questionSection .questionSection .questionText span {
