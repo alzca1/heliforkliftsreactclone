@@ -65,9 +65,9 @@ class EnquirySection extends Component {
     event.preventDefault();
     const { name, lastName, phone, email, enquiry } = this.state.enquiryForm;
 
-    const serviceID = "service_9nze7um";
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICEID;
+    const userID = process.env.REACT_APP_EMAILJS_USERID;
     const templateID = "template_o9fx3x1";
-    const userID = "user_YxSmg9hWRbYrfK0AjKi2y";
 
     const form = {
       from_name: `${name.value} ${lastName.value}`,
