@@ -68,14 +68,32 @@
   width: 85%;
 }
 
-#enquirySection .enquirySection .form input, textarea {
-  font-family: "Open Sans";
+#enquirySection .enquirySection .form .inputElement {
+  font-family: "Open Sans" !important;
   font-size: 1rem !important;
 }
 
-#enquirySection .enquirySection .form a {
+#enquirySection .enquiryForm .submitButton {
   font-size: 1.4rem;
   padding: 10px 30px;
   margin-top: 10px;
+  display: inline-block;
+  padding: 9px 23px 10px 23px;
+  text-transform: uppercase;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  border-radius: 3px;
+  font-family: "Open Sans";
+  font-weight: 800;
+  cursor: pointer;
+  background-color: #e60012;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+#enquirySection .enquiryForm .submitButton:hover {
+  background-color: white;
+  color: #e60012;
 }
 /*# sourceMappingURL=enquirySection.css.map */

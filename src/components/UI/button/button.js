@@ -7,9 +7,10 @@ export default function button(props) {
   const checkStyle = STYLES.includes(props.buttonStyle)
     ? props.buttonStyle
     : "default-button";
+    
   return (
     <>
-      <a className={`default-button ${checkStyle}`} href={props.link} type="button">
+      <a  className={`default-button ${checkStyle}`} href={props.link} type="button">
         {props.label}
       </a>
     </>
