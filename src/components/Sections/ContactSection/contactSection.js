@@ -33,7 +33,7 @@ export default function contactSection() {
           </div>
         </div>
       </div>
-      {/* <Map /> */}
+        <Map />
     </section>
   );
 }

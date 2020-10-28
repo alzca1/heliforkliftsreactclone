@@ -11,6 +11,8 @@
   background-color: transparent;
   margin: 10px 0;
   color: white;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .commonFieldStyle::-webkit-input-placeholder {
@@ -36,5 +38,50 @@
   height: 200px;
   color: white;
   font-family: "Open Sans";
+}
+
+.invalid-field {
+  border: 1px solid red;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.validationError {
+  color: white;
+  font-family: "Open Sans";
+  text-align: left;
+  padding-left: 5px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=input.css.map */

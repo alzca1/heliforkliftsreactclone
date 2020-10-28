@@ -5,8 +5,25 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
-  padding: 50px 0;
-  border: 1px solid blue;
+}
+
+#enquirySection .enquirySection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  height: auto;
+  padding: 40px 0;
 }
 
 #enquirySection::after {
@@ -29,6 +46,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 1200px;
+  padding: 100px 0;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -95,5 +114,11 @@
 #enquirySection .enquiryForm .submitButton:hover {
   background-color: white;
   color: #e60012;
+}
+
+#enquirySection .enquiryForm .submitButton:disabled {
+  background-color: #643939;
+  cursor: not-allowed;
+  color: rgba(48, 47, 47, 0.623);
 }
 /*# sourceMappingURL=enquirySection.css.map */

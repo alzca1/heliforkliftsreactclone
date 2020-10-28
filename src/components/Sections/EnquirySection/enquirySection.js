@@ -3,6 +3,7 @@ import Input from "../../UI/input/input";
 import Button from "../../UI/button/button";
 import emailjs from "emailjs-com";
 import "./enquirySection.css";
+import input from "../../UI/input/input";
 
 class EnquirySection extends Component {
   state = {
@@ -14,6 +15,14 @@ class EnquirySection extends Component {
           placeholder: "First Name",
         },
         value: "",
+        valid: false,
+        touched: false,
+        validation: {
+          required: true,
+          touched: false,
+          minLength: 2,
+          maxLength: 15,
+        },
       },
       lastName: {
         elementType: "input",
@@ -22,14 +31,30 @@ class EnquirySection extends Component {
           placeholder: "Last Name",
         },
         value: "",
+        valid: false,
+        touched: false,
+        validation: {
+          required: true,
+          touched: false,
+          minLength: 2,
+          maxLength: 15,
+        },
       },
       phone: {
         elementType: "input",
         elementConfig: {
-          type: "number",
+          type: "text",
           placeholder: "Phone Number",
         },
         value: "",
+        valid: false,
+        touched: false,
+        validation: {
+          required: true,
+          touched: false,
+          minLength: 9,
+          maxLength: 15,
+        },
       },
       email: {
         elementType: "input",
@@ -38,6 +63,12 @@ class EnquirySection extends Component {
           placeholder: "Email Address",
         },
         value: "",
+        valid: false,
+        touched: false,
+        validation: {
+          required: true,
+          touched: false,
+        },
       },
       enquiry: {
         elementType: "textArea",
@@ -46,8 +77,17 @@ class EnquirySection extends Component {
           placeholder: "How can we help you?",
         },
         value: "",
+        valid: false,
+        touched: false,
+        validation: {
+          required: true,
+          touched: false,
+          minLength: 10,
+          maxLength: 500,
+        },
       },
     },
+    isFormValid: false,
   };
 
   onTextInput = (event, inputIdentifier) => {
@@ -56,18 +96,38 @@ class EnquirySection extends Component {
     let updatedFormElement = { ...updatedForm[inputIdentifier] };
     updatedFormElement.value = event.target.value;
 
+    updatedFormElement.valid = this.formValidator(
+      updatedFormElement.value,
+      updatedFormElement.validation
+    );
+    updatedForm[inputIdentifier] = updatedFormElement;
+
+    let formIsValid = true;
+    for (let inputIdentifier in updatedForm) {
+      formIsValid = updatedForm[inputIdentifier].valid && formIsValid;
+      this.setState({ isFormValid: formIsValid });
+    }
+    this.setState({ enquiryForm: updatedForm });
+  };
+
+  handleBlur(inputIdentifier) {
+    console.log("handling_blur");
+    let updatedForm = { ...this.state.enquiryForm };
+    let updatedFormElement = { ...updatedForm[inputIdentifier] };
+    updatedFormElement.touched = true;
+
     updatedForm[inputIdentifier] = updatedFormElement;
     console.log(updatedForm);
     this.setState({ enquiryForm: updatedForm });
-  };
+  }
 
   formSubmitted = (event) => {
     event.preventDefault();
     const { name, lastName, phone, email, enquiry } = this.state.enquiryForm;
 
-    const serviceID = "service_9nze7um";
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICEID;
+    const userID = process.env.REACT_APP_EMAILJS_USERID;
     const templateID = "template_o9fx3x1";
-    const userID = "user_YxSmg9hWRbYrfK0AjKi2y";
 
     const form = {
       from_name: `${name.value} ${lastName.value}`,
@@ -75,8 +135,6 @@ class EnquirySection extends Component {
       from_email: email.value,
       message: enquiry.value,
     };
-
-    console.log(typeof form);
 
     emailjs.send(serviceID, templateID, form, userID).then(
       (result) => {
@@ -87,6 +145,22 @@ class EnquirySection extends Component {
       }
     );
   };
+
+  formValidator(value, rules) {
+    let isValid = true;
+    if (rules.required) {
+      isValid = value.trim() !== "" && isValid;
+    }
+
+    if (rules.minLength) {
+      isValid = value.length >= rules.minLength && isValid;
+    }
+
+    if (rules.maxLength) {
+      isValid = value.length <= rules.maxLength && isValid;
+    }
+    return isValid;
+  }
 
   render() {
     const { enquiryForm } = this.state;
@@ -111,6 +185,9 @@ class EnquirySection extends Component {
           value={formElement.config.value}
           waschanged={(event) => this.onTextInput(event, formElement.id)}
           className="inputElement"
+          isvalid={formElement.config.valid? 'true': 'false'}
+          touched={formElement.config.touched? 'true': 'false'}
+          onBlur={() => this.handleBlur(formElement.id)}
         />
       );
     });
@@ -126,12 +203,19 @@ class EnquirySection extends Component {
               onSubmit={(event) => this.formSubmitted(event)}
             >
               {form}
-              <input
+              <button
+                type="submit"
+                className="submitButton"
+                disabled={!this.state.isFormValid}
+              >
+                Send Message
+              </button>
+              {/* <input
                 type="submit"
                 label="send message"
                 className="submitButton"
                 value="Send Message"
-              />
+              /> */}
             </form>
           </div>
         </div>

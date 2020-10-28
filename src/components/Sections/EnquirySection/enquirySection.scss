@@ -5,8 +5,16 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
-  padding: 50px 0;
-  border: 1px solid blue;
+}
+
+#enquirySection .enquirySection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: auto;
+  padding: 40px 0; 
 }
 
 #enquirySection::after {
@@ -24,6 +32,8 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  padding: 100px 0;
+  height: auto; 
   justify-content: center;
   align-items: center;
 }
@@ -77,4 +87,11 @@
 #enquirySection .enquiryForm .submitButton:hover {
   background-color: white;
   color: rgba(230, 0, 18, 1);
+}
+
+
+#enquirySection .enquiryForm .submitButton:disabled {
+  background-color: rgb(100, 57, 57);
+  cursor: not-allowed;
+  color: rgba(48, 47, 47, 0.623);
 }
