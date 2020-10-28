@@ -1,10 +1,15 @@
 import React from "react";
 import "./catalogueSection.css";
+import catalogue1 from '../../../images/catalogue1.png'
+import catalogue2 from '../../../images/catalogue2.png'
+import catalogue3 from '../../../images/catalogue3.jpg'
+
+
 
 export default function catalogueSection() {
   const catalogue = [
     {
-      src: require("../../../img/catalogue1.png"),
+      src: catalogue1,
       type: "counterbalance forklifts",
       description:
         "Our counterbalance range meets the demands of various industries and applications:",
@@ -17,7 +22,7 @@ export default function catalogueSection() {
     },
 
     {
-      src: require("../../../img/catalogue2.png"),
+      src: catalogue2,
       type: "electric forklifts",
       description:
         "We have an extensive range of electric forklifts including lithium Ion:",
@@ -28,7 +33,7 @@ export default function catalogueSection() {
       ],
     },
     {
-      src: require("../../../img/catalogue3.jpg"),
+      src: catalogue3,
       type: "warehouse equipment",
       description: "Our exceptional range of warehouse equipment includes:",
       types: [

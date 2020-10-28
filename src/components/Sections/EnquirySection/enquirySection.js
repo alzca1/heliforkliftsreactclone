@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Input from "../../UI/input/input";
-import Button from "../../UI/button/button";
+
 import emailjs from "emailjs-com";
 import "./enquirySection.css";
-import input from "../../UI/input/input";
+
 
 class EnquirySection extends Component {
   state = {
@@ -185,8 +185,8 @@ class EnquirySection extends Component {
           value={formElement.config.value}
           waschanged={(event) => this.onTextInput(event, formElement.id)}
           className="inputElement"
-          isvalid={formElement.config.valid? 'true': 'false'}
-          touched={formElement.config.touched? 'true': 'false'}
+          isvalid={formElement.config.valid ? true : undefined}
+          touched={formElement.config.touched ? true : undefined}
           onBlur={() => this.handleBlur(formElement.id)}
         />
       );

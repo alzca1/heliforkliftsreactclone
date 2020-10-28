@@ -2,6 +2,7 @@ import React from "react";
 import "./input.css";
 
 const input = (props) => {
+  
   let inputElement = null;
   let validationError = null;
   let classes = ["commonFieldStyle"];

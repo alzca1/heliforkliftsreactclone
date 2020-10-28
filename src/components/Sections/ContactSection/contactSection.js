@@ -32,8 +32,10 @@ export default function contactSection() {
             <span className="card-info">7:00am - 4:30pm</span>
           </div>
         </div>
+        <div className="sectionMap">
+          <Map className="map" />
+        </div>
       </div>
-        <Map />
     </section>
   );
 }

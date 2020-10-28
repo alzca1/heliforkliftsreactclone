@@ -79,4 +79,9 @@
   font-family: "Open Sans";
   font-weight: 700;
 }
+
+#contactSection .contactSection .sectionMap {
+  width: 100%;
+  padding: 30px 0 410px 0;
+}
 /*# sourceMappingURL=contactSection.css.map */

@@ -1,8 +1,9 @@
 import React from "react";
 import "./storySection.css";
 import Button from "../../UI/button/button";
-import forkLiftImage from '../../../img/heli-forklifts-victoria-intro.png'
-import heliLogoImage from '../../../img/heli-img.png'
+// import {heli_intro, heli_logo} from '../../../images/images'
+import heli_intro from '../../../images/heli_intro.png'
+import heli_logo from '../../../images/heli_logo.png'
 
 export default function storySection() {
   return (
@@ -52,8 +53,8 @@ export default function storySection() {
             <Button buttonStyle="medium-white-button" label="used forklifts" />
           </div>
           <div className="storyImages">
-           <img src={forkLiftImage} alt="forklift"/>
-           <img src={heliLogoImage} alt="heli-logo"/>
+           <img src={heli_intro} alt="forklift"/>
+           <img src={heli_logo} alt="heli-logo"/>
           </div>
         </div>
       </div>
